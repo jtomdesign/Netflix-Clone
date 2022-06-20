@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--color-black);
+}
+:root {
+  --color-red: #e30813;
+  --color-black: #000;
+  --color-white: #fff;
+  --color-grey: #999999;
+}
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+.container-1 {
+  max-width: 1300px;
+  margin: auto;
+}
+.header {
+  background: url('/images/showcase-posters.jpg') no-repeat center center/cover;
+  padding: 40px 50px;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.movieDesc {
+  background: url('/images/posters/his-dark-material.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  padding: 40px 50px;
+  height: 80vh;
+  position: relative;
+  overflow: hidden;
+}
+.overlay {
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+}
+.nav .logo .logo__netflix {
+  width: 120px;
+}
+.form {
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.7);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 50px;
+  transition: all 0.3s linear;
+}
+.hide__form {
+  transform: translate(-50%, 100%);
+  transition: all 0.3s linear;
+}
+.form input {
+  display: block;
+  padding: 17px 25px;
+  font-size: 1rem;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+input:focus {
+  outline: none;
+}
+.sign {
+  color: var(--color-white);
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+.welcome__infos {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  transition: all 0.3s linear;
+}
+.btn {
+  background-color: var(--color-red);
+  color: var(--color-white);
+  padding: 10px 30px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover {
+  background-color: #f91621;
+  transition: all 0.3s ease-in-out;
+}
+.normal__size {
+  font-size: 1.3rem;
+  color: var(--color-white);
+  font-weight: 400;
+  padding: 20px 0;
+}
+.desc {
+  font-size: 3rem;
+  color: var(--color-white);
+  letter-spacing: 0.1px;
+  line-height: 1.1em;
+}
+.btn__big {
+  padding: 20px 85px;
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+.rows {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-white);
+  height: 400px;
+  overflow: hidden;
+  padding: 20px 150px;
+  border-bottom: #272727 solid 2px;
+}
+.main__title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  line-height: 1.2em;
+  font-weight: 600;
+}
+.main__para {
+  font-size: 1.4rem;
+}
+.text__part {
+  flex: 1.6;
+}
+.picture__part {
+  position: relative;
+  flex: 2;
+}
+.picture__part img {
+  width: 560px;
+  position: absolute;
+  left: 60%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.picture__part .video {
+  width: 413px;
+  position: absolute;
+  left: 60%;
+  top: 50%;
+  transform: translate(-50%, -53%);
+  z-index: 1;
+}
+.rows:nth-child(even) {
+  flex-flow: row-reverse;
+}
+.row img {
+  width: 500px;
+}
+.one {
+  height: 250px;
+}
+.mobile__side {
+  position: relative;
+}
+.mobile__top {
+  background: var(--color-black);
+  border: var(--color-grey) 2px solid;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translate(-50%, -5%);
+  width: 450px;
+  padding: 10px;
+}
+.mobile__top .poster__part img {
+  width: 60px;
+}
+.mobile__top img {
+  width: 55px;
+}
+.poster__part {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.poster__part p {
+  padding: 10px;
+  font-size: 1.1rem;
+}
+.footer {
+  padding: 20px;
+  color: var(--color-grey);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.profil__detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profils {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  border-radius: 50px;
+}
+.profil {
+  width: 100%;
+}
+.profil__name {
+  color: var(--color-white);
+  font-size: 0.9rem;
+  margin: 15px;
+}
+
+.genre {
+  background: var(--color-red);
+  color: var(--color-white);
+  padding: 5px;
+  font-size: 0.7rem;
+  border-radius: 5px;
+  margin: 3px;
+  display: inline-block;
+}
+.movie__details {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  top: 50%;
+  width: 600px;
+}
+.movie__title {
+  color: var(--color-white);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.movie__description {
+  color: var(--color-white);
+  font-size: 0.8rem;
+}
+.notes {
+  margin: 15px 0;
+}
+.notes i {
+  font-size: 0.9rem;
+  color: #eba307;
+}
+.explorer {
+  padding: 25px;
+  user-select: none;
+}
+.movies__list {
+  display: flex;
+  overflow-x: auto;
+  min-width: 100%;
+}
+.real_movies {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.movies__list::-webkit-scrollbar {
+  background: rgba(227, 8, 19, 0.072);
+  height: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.movies__list::-webkit-scrollbar-thumb {
+  background: var(--color-red);
+  border-radius: 10px;
+}
+.movies__list .movies {
+  margin: 10px;
+  cursor: pointer;
+}
+.movies__list .movies:hover {
+  opacity: 0.8;
+}
+
+.movie__poster img {
+  width: 230px;
+}
+.explore {
+  color: var(--color-white);
+  font-size: 1.5rem;
+  padding: 10px 0;
+  position: relative;
+}
+.explore::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  background: var(--color-red);
+  width: 9px;
+  height: 9px;
+  transform: translate(-50%, -50%);
+}
+.title__movie {
+  color: var(--color-white);
+  font-size: 1.1rem;
+  padding-top: 5px;
+  width: 200px;
+}
+.genre_movie {
+  color: var(--color-grey);
+  font-size: 0.6rem;
+}
+.rating i {
+  color: #eba307;
+  font-size: 0.5rem;
+}
+.year {
+  font-size: 0.8rem;
+}

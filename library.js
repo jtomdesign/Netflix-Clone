@@ -111,7 +111,7 @@ fetch(API_URL)
   <div class="notes">
   <div class="rating">${` <i class="fas fa-star"></i>`.repeat(MVP.vote_average)}
   </div>`
-        bg.style.background = `url('https://image.tmdb.org/t/p/w500/${MVP.backdrop_path}')`
+        bg.style.background = `url('https://image.tmdb.org/t/p/w500/${MVP.backdrop_path}')no-repeat center center/cover`
         headerDetails.insertAdjacentHTML('beforeend', html)
       })
     })

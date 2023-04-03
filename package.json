@@ -1,0 +1,28 @@
+{
+  "name": "netflix-clone",
+  "version": "1.0.0",
+  "description": "Netflix clone by jtomdev",
+  "main": "app.js",
+  "scripts": {
+    "start": "PORT=5800 parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jtomdesign/Netflix-Clone.git"
+  },
+  "author": "JtomDev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jtomdesign/Netflix-Clone/issues"
+  },
+  "homepage": "https://github.com/jtomdesign/Netflix-Clone#readme",
+  "dependencies": {
+    "core-js": "^3.29.1",
+    "parcel": "^2.8.3",
+    "regenerator-runtime": "^0.13.11"
+  },
+  "devDependencies": {
+    "process": "^0.11.10"
+  }
+}

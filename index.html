@@ -6,123 +6,237 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Netflix - Watch TV Shows Online, Watch Movies Online</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
     <link
       rel="shortcut icon"
       href="/images/netflix-logo.png"
       type="image/x-icon"
     />
-    <script defer src="/script.js"></script>
+    <script type="module" defer src="/js/controller.js"></script>
   </head>
   <body>
-    <header class="header">
-      <div class="nav">
-        <div class="logo">
-          <img
-            src="/images/netflix-logo-long.png"
-            alt="Logo Netflix"
-            class="logo__netflix"
-          />
-        </div>
-        <div class="sign"><button class="btn sign__btn">Sign In</button></div>
-      </div>
-      <div class="welcome__infos">
-        <p class="normal__size welcome">Welcome to Netflix</p>
-        <h1 class="desc">Unlimited movies, TV shows, and more.</h1>
-        <p class="normal__size welcome">Watch anywhere. Cancel anytime.</p>
-        <button class="btn btn__big">Restart Your Membership</button>
-      </div>
-      <div class="overlay"></div>
-      <form action="" class="form hide__form">
-        <h3 class="sign">Sign In</h3>
-        <input
-          type="email"
-          name="email"
-          placeholder="Email or phone number"
-          id="email"
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          name="password"
-          id="password"
-        />
-        <input class="btn submit" type="submit" value="Log In" />
-      </form>
-    </header>
-    <div class="container-1">
-      <section class="rows">
-        <div class="row text__part">
-          <h3 class="main__title">Enjoy on your TV.</h3>
-          <p class="main__para">
-            Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray
-            players, and more.
-          </p>
-        </div>
-        <div class="row picture__part">
-          <img src="/images/tv.png" alt="tv" class="tv" />
-          <video
-            class="video"
-            autoplay
-            loop
-            src="/images/video-tv-0819.m4v"
-          ></video>
-        </div>
-      </section>
-      <section class="rows one">
-        <div class="row text__part">
-          <h3 class="main__title">Watch everywhere.</h3>
-          <p class="main__para">
-            Stream unlimited movies and TV shows on your phone, tablet, laptop,
-            and TV.
-          </p>
-        </div>
-        <div class="row"></div>
-      </section>
-      <section class="rows">
-        <div class="row text__part">
-          <h3 class="main__title">Download your shows to watch offline.</h3>
-          <p class="main__para">
-            Save your favorites easily and always have something to watch.
-          </p>
-        </div>
-        <div class="row mobile__side">
-          <img src="/images/mobile-0819.jpg" alt="phone" class="phone" />
-          <div class="mobile__top">
-            <div class="poster__part">
-              <img src="/images/posters/stranger-things.jpg" alt="hisdark" />
-              <p class="main__para">Downloading...</p>
-            </div>
-            <img src="/images/download-icon.gif" alt="downloadgif" />
+    <!-- <div class="preloader">
+      <img src="/images/loader.gif" alt="loader" class="loader" />
+    </div> -->
+
+    <div class="home__container hide__containe" href="home">
+      <header class="header">
+        <div class="nav">
+          <div class="logo">
+            <img
+              src="/images/netflix-logo-long.png"
+              alt="Logo Netflix"
+              class="logo__netflix"
+            />
+          </div>
+          <div class="sign">
+            <button class="btn sign__btn">
+              <i class="fas fa-sign-in-alt"></i> Sign In
+            </button>
           </div>
         </div>
-      </section>
-      <section class="rows">
-        <div class="row text__part">
-          <h3 class="main__title">Create profiles for kids.</h3>
-          <p class="main__para">
-            Send kids on adventures with their favorite characters in a space
-            made just for them—free with your membership.
-          </p>
+        <div class="welcome__infos">
+          <p class="normal__size welcome">Welcome to Netflix</p>
+          <h1 class="desc">Unlimited movies, TV shows, and more.</h1>
+          <p class="normal__size welcome">Watch anywhere. Cancel anytime.</p>
+          <button class="btn btn__big">Restart Your Membership</button>
         </div>
-        <div class="row">
-          <img src="/images/kidsValueProp.png" alt="kids" class="kids" />
-        </div>
-      </section>
-      <section class="rows">
-        <div class="row text__part">
-          <h3 class="main__title">
-            Have an Android Phone? Get our new free plan!
-          </h3>
-          <p class="main__para">
-            Watch a selection of new movies and TV shows without adding any
-            payment details!
-          </p>
-        </div>
-        <div class="row">
-          <img src="/images/en.jpg" alt="kids" class="kids" />
-        </div>
-      </section>
+        <div class="overlay"></div>
+        <form action="" class="form hide__items">
+          <!-- <div class="preloader">
+            <img src="/images/loader.gif" alt="loader" class="loader" />
+          </div> -->
+          <h3 class="sign">Sign In</h3>
+          <input
+            type="name"
+            name="name"
+            class="input__username"
+            placeholder="Email or username"
+            id="name"
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            class="input__password"
+            name="password"
+            id="password"
+          />
+          <input class="btn submit" type="submit" value="Log In" />
+        </form>
+      </header>
+      <div class="container-1">
+        <section class="rows">
+          <div class="row text__part">
+            <h3 class="main__title">Enjoy on your TV.</h3>
+            <p class="main__para">
+              Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV,
+              Blu-ray players, and more.
+            </p>
+          </div>
+          <div class="row picture__part">
+            <img src="/images/tv.png" alt="tv" class="tv" />
+            <video
+              class="video"
+              autoplay
+              loop
+              src="/images/video-tv-0819.m4v"
+            ></video>
+          </div>
+        </section>
+        <section class="rows one">
+          <div class="row text__part">
+            <h3 class="main__title">Watch everywhere.</h3>
+            <p class="main__para">
+              Stream unlimited movies and TV shows on your phone, tablet,
+              laptop, and TV.
+            </p>
+          </div>
+          <div class="row"></div>
+        </section>
+        <section class="rows">
+          <div class="row text__part">
+            <h3 class="main__title">Download your shows to watch offline.</h3>
+            <p class="main__para">
+              Save your favorites easily and always have something to watch.
+            </p>
+          </div>
+          <div class="row mobile__side">
+            <img src="/images/mobile-0819.jpg" alt="phone" class="phone" />
+            <div class="mobile__top">
+              <div class="poster__part">
+                <img src="/images/posters/stranger-things.jpg" alt="hisdark" />
+                <p class="main__para">Downloading...</p>
+              </div>
+              <img src="/images/download-icon.gif" alt="downloadgif" />
+            </div>
+          </div>
+        </section>
+        <section class="rows">
+          <div class="row text__part">
+            <h3 class="main__title">Create profiles for kids.</h3>
+            <p class="main__para">
+              Send kids on adventures with their favorite characters in a space
+              made just for them—free with your membership.
+            </p>
+          </div>
+          <div class="row">
+            <img src="/images/kidsValueProp.png" alt="kids" class="kids" />
+          </div>
+        </section>
+        <section class="rows">
+          <div class="row text__part">
+            <h3 class="main__title">
+              Have an Android Phone? Get our new free plan!
+            </h3>
+            <p class="main__para">
+              Watch a selection of new movies and TV shows without adding any
+              payment details!
+            </p>
+          </div>
+          <div class="row">
+            <img src="/images/en.jpg" alt="kids" class="kids" />
+          </div>
+        </section>
+      </div>
     </div>
+
+    <div class="library__container hide__container" href="library">
+      <div class="library__header movieDesc">
+        <div class="nav">
+          <div class="logo">
+            <a href="/index.html">
+              <img
+                src="/images/netflix-logo-long.png"
+                alt="Logo Netflix"
+                class="logo__netflix logo__big"
+              />
+            </a>
+          </div>
+          <div class="profil__detail">
+            <p class="main__para profil__name">
+              <span class="user__name">Joel</span> is watching
+            </p>
+            <div class="profils">
+              <img class="profil" src="/images/user-1.jpg" alt="profil" />
+            </div>
+          </div>
+        </div>
+        <div class="movie__details">
+          <div class="genres">
+            <div class="genre">Adventure</div>
+            <div class="genre">Comedie</div>
+          </div>
+          <div class="movie__title">HIS DARK MATERIAL</div>
+          <div class="movie__description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+            repellat maiores ab sed aspernatur dolorum, maxime soluta
+            perspiciatis repudiandae totam sint at id quos nulla quibusdam
+            aliquam ut velit commodi ea, ullam assumenda. Commodi vero fugiat
+            sapiente facere tempora voluptates aliquam porro quasi minus,
+            repudiandae similique
+          </div>
+          <div class="rating">7.7</div>
+        </div>
+
+        <div class="overlay"></div>
+      </div>
+      <div class="container-1">
+        <div class="explorer">
+          <h3 class="explore">Trending</h3>
+          <div class="movies__list tv__shows">
+            <!-- <div class="preloader">
+              <img src="/images/loader.gif" alt="loader" class="loader" />
+            </div> -->
+            <!-- <div class="movies">
+              <div class="movie__poster">
+                <img
+                  src="/images/posters/his-dark-material.jpg"
+                  alt=""
+                  class="post"
+                />
+              </div>
+              <div class="movie__infos">
+                <h3 class="title__movie">Squid Game</h3>
+                <p class="genre_movie">adventure/drama</p>
+                <p class="genre_movie year">2019</p>
+                <div class="rating">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+        <div class="explorer">
+          <h3 class="explore">Movies</h3>
+          <div class="container">
+            <div class="movies__list real_movies">
+              <!-- <div class="movies real__movie">
+                <div class="movie__poster">
+                  <img
+                    src="/images/posters/the-adam-project.jpg"
+                    alt=""
+                    class="post"
+                  />
+                </div>
+                <div class="movie__infos">
+                  <h3 class="title__movie">Adam Project</h3>
+                  <p class="genre_movie">adventure/drama</p>
+                  <p class="genre_movie year">2019</p>
+                  <div class="rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <footer class="footer">Netflix Clone by Jtom design &copy 2022</footer>
   </body>
 </html>

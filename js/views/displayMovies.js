@@ -1,0 +1,39 @@
+import View from './views.js';
+
+class DisplayMovie extends View {
+  _parentElement = document.querySelector('.movie__details');
+  _bg = document.querySelector('.movieDesc');
+  _moviesContainer = document.querySelectorAll('.movies__list');
+
+  addHandlerMovie(handler) {
+    this._moviesContainer.forEach((container) =>
+      container.addEventListener('click', function (e) {
+        console.log(this);
+        //console.log(e.target.closest('.movies__link').dataset.id);
+        handler(e.target.closest('.movies__link').dataset.id);
+      })
+    );
+  }
+
+  _generateMarkup() {
+    this._bg.style.background = `url('https://image.tmdb.org/t/p/w500${this._data.backgroundImage}')no-repeat center center/cover`;
+    return ` 
+      <div class="genres">
+        ${this._data.genre.map(this._generateMarkupGenre).join('')}
+      
+      </div>
+      <div class="movie__title">${this._data.title}</div>
+      <div class="movie__description">
+      ${this._data.desc}
+      </div>
+      <div class="notes">
+      <div class="rating">${this._data.note.toFixed(1)}
+      </div>`;
+  }
+
+  _generateMarkupGenre(genre) {
+    return `<div class="genre">${genre.name}</div>`;
+  }
+}
+
+export default new DisplayMovie();
